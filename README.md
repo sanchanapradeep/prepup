@@ -20,14 +20,14 @@ This load balancer evenly distributes load (requests from your users) onto your 
 
 https://www.lecloud.net/post/7295452622/scalability-for-dummies-part-1-clones
 
-#2. Next bottle neck is Database
-#Prob: your servers can now horizontally scale and you can already serve thousands of concurrent requests. But somewhere down the road your application gets slower and slower and finally breaks down. The reason: your database. It’s MySQL, isn’t it?
+#  2. Next bottle neck is Database
+# Prob: your servers can now horizontally scale and you can already serve thousands of concurrent requests. But somewhere down the road your application gets slower and slower and finally breaks down. The reason: your database. It’s MySQL, isn’t it?
 
-#Sol 1:Path #1 is to stick with MySQL and keep the “beast” running. Hire a database administrator (DBA,) tell him to do master-slave replication (read from slaves, write to master) and upgrade your master server by adding RAM, RAM and more RAM. he needs to implemnet “sharding”, “denormalization” and “SQL tuning”
+# Sol 1:Path #1 is to stick with MySQL and keep the “beast” running. Hire a database administrator (DBA,) tell him to do master-slave replication (read from slaves, write to master) and upgrade your master server by adding RAM, RAM and more RAM. he needs to implemnet “sharding”, “denormalization” and “SQL tuning”
 
-#sol 2:
-#1. denormalise the schema ( no joins in mysql like nosqlDB)  
-#2. intoduce cache:But even if you successfully switch to the latest and greatest NoSQL database and let your app do the dataset-joins, soon your database requests will again be slower and slower. You will need to introduce a cache.
+# sol 2:
+# 1. denormalise the schema ( no joins in mysql like nosqlDB)  
+# 2. intoduce cache:But even if you successfully switch to the latest and greatest NoSQL database and let your app do the dataset-joins, soon your database requests will again be slower and slower. You will need to introduce a cache.
 
 https://www.lecloud.net/post/7994751381/scalability-for-dummies-part-2-database
 
