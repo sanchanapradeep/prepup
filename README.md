@@ -31,10 +31,32 @@ https://www.lecloud.net/post/7295452622/scalability-for-dummies-part-1-clones
 
 https://www.lecloud.net/post/7994751381/scalability-for-dummies-part-2-database
 
+# introduce cache
+# 1 - Cached Database Queries
+# 2 - Cached Objects
+# your class assemble a dataset from your database and then store the complete instance of the class or the assembed dataset in the cache.
+# when your class has finished the “assembling” of the data array, directly store the data array, or better yet the complete instance of the class, in the cache! This allows you to easily get rid of the object whenever something did change and makes the overall operation of your code faster and more logical.
+
+# Some ideas of objects to cache:
+
+# user sessions (never use the database!)
+# fully rendered blog articles
+# activity streams
+# user<->friend relationships 
+# With Redis and a clever key’ing there may be a chance that you even can get completly rid of a database. But if you just need to cache, take Memcached, because it scales like a charm.
 
 
 https://www.lecloud.net/post/9246290032/scalability-for-dummies-part-3-cache
 
+# Asynchronism
+For long running queries u need to add async mechanism
+# Async #1
+# Very often this paradigm is used to turn dynamic content into static content.  Pages of a website, maybe built with a massive framework or CMS, are pre-rendered and locally stored as static HTML files on every change. Often these computing tasks are done on a regular basis, maybe by a script which is called every hour by a cronjob. This pre-computing of overall general data can extremely improve websites and web apps and makes them very scalable and performant. Just imagine the scalability of your website if the script would upload these pre-rendered HTML pages to AWS S3 or Cloudfront or another Content Delivery Network! Your website would be super responsive and could handle millions of visitors per hour!
+
+# Async #2
+# A user comes to your website and starts a very computing intensive task which would take several minutes to finish. So the frontend of your website sends a job onto a job queue and immediately signals back to the user: your job is in work, please continue to the browse the page. The job queue is constantly checked by a bunch of workers for new jobs. If there is a new job then the worker does the job and after some minutes sends a signal that the job was done. The frontend, which constantly checks for new “job is done” - signals, sees that the job was done and informs the user about it. I know, that was a very simplified example. 
+
+# If you now want to dive more into the details and actual technical design, I recommend you take a look at the first 3 tutorials on the RabbitMQ website. RabbitMQ is one of many systems which help to implement async processing. You could also use ActiveMQ or a simple Redis list. The basic idea is to have a queue of tasks or jobs that a worker can process. Asynchronism seems complicated, but it is definitely worth your time to learn about it and implement it yourself. Backends become nearly infinitely scalable and frontends become snappy which is good for the overall user experience. 
 
 
 https://www.lecloud.net/post/9699762917/scalability-for-dummies-part-4-asynchronism
