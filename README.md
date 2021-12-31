@@ -22,7 +22,7 @@ This load balancer evenly distributes load (requests from your users) onto your 
 https://www.lecloud.net/post/7295452622/scalability-for-dummies-part-1-clones
 
 #  2. Next bottle neck is Database
-# Prob: your servers can now horizontally scale and you can already serve thousands of concurrent requests. But somewhere down the road your application gets slower and slower and finally breaks down. The reason: your database. It’s MySQL, isn’t it?
+ Prob: your servers can now horizontally scale and you can already serve thousands of concurrent requests. But somewhere down the road your application gets slower and slower and finally breaks down. The reason: your database. It’s MySQL, isn’t it?
 
 # Sol 1:
 Path #1 is to stick with MySQL and keep the “beast” running. Hire a database administrator (DBA,) tell him to do master-slave replication (read from slaves, write to master) and upgrade your master server by adding RAM, RAM and more RAM. he needs to implemnet “sharding”, “denormalization” and “SQL tuning”
@@ -72,3 +72,12 @@ A service is scalable if it results in increased performance in a manner proport
 
 * If you have a performance problem, your system is slow for a single user.
 * If you have a scalability problem, your system is fast for a single user but slow under heavy load.
+
+
+# Performance Vs Scalability
+
+* Perfomance ->if you have performance problem, your system is slow for a single user.
+* scalability -> if you have scalability problem, your system is fast for single user but slow under heavy load.
+
+# Latency Vs Throughput
+* You should strive for maximal throughput with acceptable latency
