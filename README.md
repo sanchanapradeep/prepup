@@ -91,14 +91,15 @@ P - Partitioning
 
 
 At any point You can have only 2
-Centralized System (like RDBMS)
+# Centralized System (like RDBMS)
 * CA
-ACID -> Atomic Consistance Isolate Durable
-Disturbuted system ( we will have network partition P)
+
+ ACID -> Atomic Consistance Isolate Durable
+# Disturbuted system ( we will have network partition P)
 * CP 
 * AP
 
-CAP in practice only 2 systems 
+# CAP in practice only 2 systems 
 * There is only one choice to make, in case of network partion
 
 BASE -> Basically Available Soft state Eventually
