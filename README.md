@@ -108,7 +108,7 @@ BASE -> Basically Available Soft state Eventually
 # Availablity pattern:
 * Fail over
 * Replication
- ** Master slave
- ** Tree replication
- ** Master Master
- ** Buddy replication
+ *  Master slave
+ * Tree replication
+ * Master Master
+ * Buddy replication
