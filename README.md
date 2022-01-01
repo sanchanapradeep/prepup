@@ -104,3 +104,11 @@ At any point You can have only 2
 
 BASE -> Basically Available Soft state Eventually
 
+
+# Availablity pattern:
+* Fail over
+* Replication
+ ** Master slave
+ ** Tree replication
+ ** Master Master
+ ** Buddy replication
