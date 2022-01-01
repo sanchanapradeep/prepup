@@ -81,3 +81,25 @@ A service is scalable if it results in increased performance in a manner proport
 
 # Latency Vs Throughput
 * You should strive for maximal throughput with acceptable latency
+
+https://www.slideshare.net/jboner/scalability-availability-stability-patterns/
+
+# CAP theorem
+C - consistency
+A - Availability
+P - Partitioning
+
+
+At any point You can have only 2
+Centralized System (like RDBMS)
+* CA
+ACID -> Atomic Consistance Isolate Durable
+Disturbuted system ( we will have network partition P)
+* CP 
+* AP
+
+CAP in practice only 2 systems 
+* There is only one choice to make, in case of network partion
+
+BASE -> Basically Available Soft state Eventually
+
