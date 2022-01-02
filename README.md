@@ -114,3 +114,18 @@ Replication:
  * Tree replication
  * Master Master
  * Buddy replication
+
+
+# Scaling RDBMS: sharding
+* Partationing
+* Replication
+![image](https://user-images.githubusercontent.com/50334391/147863768-83c1a704-62fb-424b-b806-bca0e4663593.png)
+![image](https://user-images.githubusercontent.com/50334391/147863776-f06ceeda-6185-4eb6-b7db-ba25adb5ad42.png)
+
+Eventually good enough
+
+![image](https://user-images.githubusercontent.com/50334391/147863794-a9b1b8a9-16e3-44c0-ad31-ee2ab1fc11c2.png)
+When RDBMS is not good
+Scalaing the reads to RDBMS is hard
+
+
