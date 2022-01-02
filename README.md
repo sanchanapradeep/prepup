@@ -126,6 +126,15 @@ Eventually good enough
 
 ![image](https://user-images.githubusercontent.com/50334391/147863794-a9b1b8a9-16e3-44c0-ad31-ee2ab1fc11c2.png)
 When RDBMS is not good
-Scalaing the reads to RDBMS is hard
+Scaling the reads to RDBMS is hard
+Scaling writes to RDMS is impossible
+
+# sol: NOSQL ( Not only SQL)
+Key value database
+column database
+Document database
+Graph database
+Datastructure Database
+
 
 
