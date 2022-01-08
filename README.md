@@ -136,5 +136,23 @@ Document database
 Graph database
 Datastructure Database
 
+* Performance vs scalability
+* Latency vs throughput
+* Availability vs consistency
+# Performance vs scalability
+If you have a performance problem, your system is slow for a single user.
+If you have a scalability problem, your system is fast for a single user but slow under heavy load.
 
+# Latency vs throughput
+Latency is the time to perform some action or to produce some result.
 
+Throughput is the number of such actions or results per unit of time.
+
+Generally, you should aim for maximal throughput with acceptable latency.
+
+#  Availability vs consistency
+  * CAP Theorem
+   https://robertgreiner.com/cap-theorem-revisited/
+   * Consistency - A read is guaranteed to return the most recent write for a given client.
+   * Availability - A non-failing node will return a reasonable response within a reasonable amount of time (no error or timeout).
+Partition Tolerance - The system will continue to function when network partitions occur.
