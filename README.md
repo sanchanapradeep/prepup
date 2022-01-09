@@ -156,3 +156,24 @@ Generally, you should aim for maximal throughput with acceptable latency.
    * Consistency - A read is guaranteed to return the most recent write for a given client.
    * Availability - A non-failing node will return a reasonable response within a reasonable amount of time (no error or timeout).
 Partition Tolerance - The system will continue to function when network partitions occur.
+
+
+# VCN
+Virtual clound network : similar to corporate network ..
+only with in the corporate network things can be accessed.. but not outside ones..
+Both applications and DB..can't be accessed from outside..
+Public  subnet
+private subnet
+
+# Public subnet: External facing network..
+if u want to be accessed from internet .. u hav to keep it in public subnet like applications
+# Private subnet: with in the VCN
+only can be accessed with in the network.. like DB
+![image](https://user-images.githubusercontent.com/50334391/148666623-2fcafdea-3ba9-43e4-8bd9-aefdabb79da6.png)
+Route table routes the network traffic to the desired server
+1. as soon as u try to hit the ip.. it verifies in the route table and ..route to desired destination.. 
+2. if ur ip is 172.31.0.0/16 and target local .. it means if the ip is with in the range then route to local server
+3. 0.0.0.0/0 igw-> route to internet gateway.. that means public network.
+Public Subnet  access internet via Internet gatway
+Private subnet .. if it need to download patches and any installation it access internet via NAT gateway
+NAT gatway:
