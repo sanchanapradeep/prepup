@@ -175,5 +175,9 @@ Route table routes the network traffic to the desired server
 2. if ur ip is 172.31.0.0/16 and target local .. it means if the ip is with in the range then route to local server
 3. 0.0.0.0/0 igw-> route to internet gateway.. that means public network.
 Public Subnet  access internet via Internet gatway
-Private subnet .. if it need to download patches and any installation it access internet via NAT gateway
-NAT gatway:
+Private subnet .. if it need to download patches and any installation it access internet 
+3 ways u can do it 
+
+![image](https://user-images.githubusercontent.com/50334391/148666771-9559d181-5e06-4351-a067-4eddb2622a79.png)
+
+# These NAT gateways created in public subnet which allows private subnet to communicate to internet.
