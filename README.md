@@ -23,6 +23,9 @@ https://www.lecloud.net/post/7295452622/scalability-for-dummies-part-1-clones
 
 #  2. Next bottle neck is Database
  Prob: your servers can now horizontally scale and you can already serve thousands of concurrent requests. But somewhere down the road your application gets slower and slower and finally breaks down. The reason: your database. It’s MySQL, isn’t it?
+ 
+ NAT Gateway - will be created in public subnet 
+ if u want to talk to internet  devices has to define only public subnet.
 
 # Sol 1:
 Path #1 is to stick with MySQL and keep the “beast” running. Hire a database administrator (DBA,) tell him to do master-slave replication (read from slaves, write to master) and upgrade your master server by adding RAM, RAM and more RAM. he needs to implemnet “sharding”, “denormalization” and “SQL tuning”
