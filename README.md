@@ -159,7 +159,7 @@ Partition Tolerance - The system will continue to function when network partitio
 
 
 # VCN
-Virtual clound network : similar to corporate network ..
+Virtual cloud network : similar to corporate network ..
 only with in the corporate network things can be accessed.. but not outside ones..
 Both applications and DB..can't be accessed from outside..
 Public  subnet
